@@ -12,16 +12,13 @@ const ExpenseForm = (props) => {
 
     const titleChangeHandler = (event) => {
         setEnteredTitle(event.target.value);
-        console.log(enteredTitle);
     }
     const amountChangeHandler = (event) => {
         setEnteredAmount(event.target.value);
-        console.log(enteredAmount);
 
     }
     const dateChangeHandler = (event) => {
         setEnteredDate(event.target.value);
-        console.log(enteredDate.toLocaleUpperCase());
     }
 
     const submitHandler = (event) => {
