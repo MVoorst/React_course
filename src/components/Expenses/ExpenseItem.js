@@ -16,17 +16,19 @@ const ExpenseItem = (props) => {
 
 
     return (
-        <Card className='expense-item'>
-            <ExpenseDate date={props.date}/>
-            <div className='expense-item__description'>
-                <h2>{props.title}</h2>
-                <div className='expense-item__price'>{props.amount}</div>
-            </div>
+        <li>
+            <Card className='expense-item'>
+                <ExpenseDate date={props.date}/>
+                <div className='expense-item__description'>
+                    <h2>{props.title}</h2>
+                    <div className='expense-item__price'>{props.amount}</div>
+                </div>
 
-            {/*<button onClick={clickHandler()}>Change Title</button> <- {
-            de () zorgen ervoor dat de methode wordt aangeroepen bij inladen van jsx, dus nog voor de kick}
-            */}
-        </Card>
+                {/*<button onClick={clickHandler()}>Change Title</button> <- {
+                de () zorgen ervoor dat de methode wordt aangeroepen bij inladen van jsx, dus nog voor de kickoff}
+                */}
+            </Card>
+        </li>
     )
  }
 

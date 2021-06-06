@@ -4,11 +4,10 @@ import {useState} from "react";
 
 
 const ExpenseForm = (props) => {
-
-
     const [enteredTitle, setEnteredTitle] = useState('');
     const [enteredAmount, setEnteredAmount] = useState('');
     const [enteredDate, setEnteredDate] = useState('');
+    const [closeExpenseForm] = useState(false);
 
     const titleChangeHandler = (event) => {
         setEnteredTitle(event.target.value);
@@ -26,7 +25,7 @@ const ExpenseForm = (props) => {
 
         const expenseData = {
             title: enteredTitle,
-            amount: enteredAmount,
+            amount: +enteredAmount,
             date: new Date(enteredDate)
         }
 
@@ -54,6 +53,7 @@ const ExpenseForm = (props) => {
                 </div>
             </div>
             <div className='new-expense__actions'>
+                <button type={"button"} onClick={props.onCancel}>Cancel</button>
                 <button type={'Submit'}>Add Expense</button>
             </div>
         </form>
